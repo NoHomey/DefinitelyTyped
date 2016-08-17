@@ -1708,6 +1708,7 @@ declare namespace __MaterialUI {
         value?: string | number;
     }
     export class TextField extends React.Component<TextFieldProps, {}> {
+        input: Element;
         blur(): void;
         focus(): void;
         select(): void;
