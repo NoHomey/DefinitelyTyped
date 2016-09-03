@@ -16,7 +16,7 @@ declare module 'nes' {
 
     export class Socket {
         id: any;
-        app: Object;
+        app: any;
         auth: SocketAuthObject;
         disconect(callback?: () => void): void;
         send(message: any, callback?: (err?: any) => void): void;
@@ -93,7 +93,7 @@ declare module 'nes' {
     export interface ClientRequestOptions {
         path: string;
         method?: string;
-        headers?: Object;
+        headers?: any;
         payload?: any;
     }
 
@@ -111,7 +111,7 @@ declare module 'nes' {
         connect(callback: (err?: any) => void): void;
         disconnect(): void;
         id: any;
-        request(options: string | ClientRequestOptions, callback: (err: any, payload: any, statusCode?: number, headers?: Object) => void): void;
+        request(options: string | ClientRequestOptions, callback: (err: any, payload: any, statusCode?: number, headers?: any) => void): void;
         message(message: any, callback: (err: any, message: any) => void): void;
         subscribe(path: string, handler: (message: any, flags: ClientSubscribeFlags) => void, callback: (err?: any) => void): void;
         unsubscribe(path: string, handler: (message: any, flags: ClientSubscribeFlags) => void, callback: (err?: any) => void): void;
